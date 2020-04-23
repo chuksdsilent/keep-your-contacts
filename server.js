@@ -4,7 +4,6 @@ const connectDB = require('./config/db');
 const path = require('path');
 connectDB();
 
-app.get('/', (req, res) => res.send({ msg: 'Welcome to the Contactkeeper api' }));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contacts'));
